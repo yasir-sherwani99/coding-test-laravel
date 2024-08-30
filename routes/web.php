@@ -2,6 +2,4 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::any('/', [App\Http\Controllers\CustomerController::class, 'index'])->name('search');
